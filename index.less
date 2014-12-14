@@ -1,0 +1,194 @@
+@import 'stylesheets/syntax-variables.less';
+
+// Editor interface
+
+.editor-colors,
+:host {
+   background-color: @syntax-background-color;
+   color: @syntax-text-color;
+}
+
+.editor,
+:host {
+
+   .wrap-guide {
+      background-color: @syntax-wrap-guide-color;
+      width: 2px;
+   }
+
+   .indent-guide {
+      color: @syntax-indent-guide-color;
+   }
+
+   .invisible,
+   .invisible-character {
+      color: @syntax-invisible-character-color;
+   }
+
+   .gutter {
+      background-color: @syntax-gutter-background-color;
+      color: @syntax-gutter-text-color;
+
+      .line-number {
+
+         &.cursor-line {
+            background-color: @syntax-gutter-background-color-selected;
+            color: @syntax-gutter-text-color-selected;
+         }
+
+         &.git-line-added {
+            border-left-color: @syntax-color-added;
+         }
+
+         &.git-line-modified {
+            border-left-color: @syntax-color-modified;
+         }
+
+         &.git-line-removed:before {
+            border-left-color: @syntax-color-removed;
+         }
+      }
+   }
+
+   .gutter .line-number.folded,
+   .gutter .line-number:after,
+   .fold-marker:after {
+      color: @pink;
+   }
+
+   .cursor {
+      border-left: 2px solid @syntax-cursor-color;
+   }
+
+   .cursor-line {
+      background-color: @light-transparent-gray;
+   }
+
+   .highlight.selection .region {
+      background-color: @syntax-selection-color;
+   }
+}
+
+.region.bracket-matcher {
+   border: 1px solid @pink;
+}
+
+// Common tokens
+
+.source {
+   color: @dark-gray;
+}
+
+.comment,
+.source.embedded .comment {
+   color: @pink;
+}
+
+.entity,
+.variable,
+.keyword.operator {
+   color: @dark-gray;
+}
+
+.keyword.control,
+.keyword.other,
+.storage {
+   color: @blue;
+}
+
+.constant,
+.keyword.unit,
+.string {
+   color: @green;
+}
+
+.source .string {
+
+   .source,
+   .meta.embedded.line {
+      color: @green;
+   }
+
+   .punctuation.section.embedded {
+      color: @green;
+
+      .source {
+         color: @green;
+      }
+   }
+}
+
+// Language-specific tokens
+
+.c {
+
+   &.storage.type {
+      color: @blue;
+   }
+}
+
+.coffee {
+
+   &.function {
+
+      &.support {
+         color: @blue;
+
+         &.console {
+            color: @dark-gray;
+         }
+      }
+
+      &.storage.type {
+         color: @blue;
+      }
+   }
+}
+
+.css {
+
+   &.support.type.property-name {
+      color: @blue;
+   }
+}
+
+.gfm {
+
+   &.heading {
+      color: @blue;
+   }
+
+   &.comment.quote {
+      color: @dark-gray;
+   }
+
+   &.source .markup.heading {
+      font-weight: normal;
+   }
+}
+
+.html {
+
+   &.entity.other.attribute-name,
+   &.meta.tag.doctype {
+      color: @blue;
+   }
+}
+
+.java {
+
+   &.storage {
+
+      &.type {
+         color: @dark-gray;
+
+         &.primitive {
+            color: @blue;
+         }
+      }
+
+      &.modifier.import {
+         color: @green;
+      }
+   }
+}
