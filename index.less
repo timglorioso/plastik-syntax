@@ -13,7 +13,6 @@
 
    .wrap-guide {
       background-color: @syntax-wrap-guide-color;
-      width: 2px;
    }
 
    .indent-guide {
@@ -67,135 +66,157 @@
    .highlight.selection .region {
       background-color: @syntax-selection-color;
    }
-}
 
-.region.bracket-matcher {
-   background-color: @transparent-pink;
-}
+   .region.bracket-matcher {
+      background-color: @transparent-pink;
+      border: 0;
+   }
 
-// Common tokens
-
-.source {
-   color: @dark-gray;
-}
-
-.comment,
-.source.embedded .comment {
-   color: @pink;
-}
-
-.entity,
-.variable,
-.keyword.operator {
-   color: @dark-gray;
-}
-
-.keyword.control,
-.keyword.other,
-.storage {
-   color: @blue;
-}
-
-.constant,
-.keyword.unit,
-.string {
-   color: @green;
-}
-
-.source .string {
+   // Common tokens
 
    .source,
-   .meta.embedded.line {
-      color: @green;
+   .text {
+      color: @dark-gray;
    }
 
-   .punctuation.section.embedded {
-      color: @green;
-
-      .source {
-         color: @green;
-      }
+   .comment,
+   .source.embedded .comment {
+      color: @pink;
    }
-}
 
-// Language-specific tokens
+   .entity,
+   .variable,
+   .keyword.operator {
+      color: @dark-gray;
+   }
 
-.c {
-
-   &.storage.type {
+   .keyword.control,
+   .keyword.other,
+   .storage {
       color: @blue;
    }
-}
 
-.coffee {
+   .constant,
+   .keyword.unit,
+   .string {
+      color: @green;
+   }
 
-   &.function {
+   .source .string {
 
-      &.support {
-         color: @blue;
+      .source,
+      .meta.embedded.line {
+         color: @green;
+      }
 
-         &.console {
-            color: @dark-gray;
+      .punctuation.section.embedded {
+         color: @green;
+
+         .source {
+            color: @green;
          }
       }
+   }
+
+   // Language-specific tokens
+
+   .c {
 
       &.storage.type {
          color: @blue;
       }
    }
-}
 
-.css {
+   .coffee {
 
-   &.support.type.property-name {
-      color: @blue;
-   }
-}
+      &.function {
 
-.gfm {
+         &.support {
+            color: @blue;
 
-   &.heading {
-      color: @blue;
-   }
+            &.console {
+               color: @dark-gray;
+            }
+         }
 
-   &.comment.quote {
-      color: @dark-gray;
-   }
-
-   &.source .markup.heading {
-      font-weight: normal;
-   }
-}
-
-.html {
-
-   &.entity.other.attribute-name,
-   &.meta.tag.doctype {
-      color: @blue;
-   }
-}
-
-.java {
-
-   &.storage {
-
-      &.type {
-         color: @dark-gray;
-
-         &.primitive {
+         &.storage.type {
             color: @blue;
          }
       }
+   }
 
-      &.modifier.import {
-         color: @green;
+   .css {
+
+      &.support.type.property-name {
+         color: @blue;
+      }
+
+      &.pseudo-class {
+         color: @light-gray;
       }
    }
-}
 
-.python {
+   .gfm {
 
-   &.keyword.operator.logical {
-      color: @blue;
+      &.heading {
+         color: @blue;
+      }
+
+      &.comment.quote {
+         color: @dark-gray;
+      }
+
+      &.source .markup.heading {
+         font-weight: normal;
+      }
+   }
+
+   .html {
+
+      &.entity.name.tag,
+      &.punctuation.tag,
+      &.meta.tag.doctype {
+         color: @light-gray;
+      }
+
+      &.entity.attribute-name {
+         color: @blue;
+      }
+   }
+
+   .java {
+
+      &.storage {
+
+         &.type {
+            color: @dark-gray;
+
+            &.primitive {
+               color: @blue;
+            }
+         }
+
+         &.modifier.import {
+            color: @green;
+         }
+      }
+   }
+
+   .python {
+
+      &.keyword.operator.logical {
+         color: @blue;
+      }
+   }
+
+   .scss {
+
+      &.entity.name {
+         color: @light-gray;
+      }
+
+      &.property-name {
+         color: @blue;
+      }
    }
 }
