@@ -1,7 +1,7 @@
 {
   "name": "plastik-syntax",
   "theme": "syntax",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Warning: this is not a toy.",
   "repository": "https://github.com/timglorioso/plastik-syntax",
   "license": "MIT",
