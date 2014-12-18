@@ -151,7 +151,8 @@
          color: @blue;
       }
 
-      &.pseudo-class {
+      &.pseudo-class,
+      &.entity.name.tag {
          color: @light-gray;
       }
    }
@@ -202,6 +203,18 @@
       }
    }
 
+   .less {
+
+      // & operator doesn't work here
+      .keyword.control.logical.operator {
+         color: @dark-gray;
+      }
+
+      .keyword.control.html.elements {
+         color: @light-gray;
+      }
+   }
+
    .python {
 
       &.keyword.operator.logical {
@@ -211,7 +224,7 @@
 
    .scss {
 
-      &.entity.name {
+      &.entity.name.tag {
          color: @light-gray;
       }
 
