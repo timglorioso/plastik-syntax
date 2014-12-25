@@ -218,8 +218,17 @@
 
    .python {
 
-      &.keyword.operator.logical {
-         color: @blue;
+      &.keyword {
+
+         &.operator.logical {
+            color: @blue;
+         }
+
+         // If you prefer "print" to be considered a highlighted keyword,
+         // comment out this rule.
+         &.other {
+            color: @dark-gray;
+         }
       }
    }
 
