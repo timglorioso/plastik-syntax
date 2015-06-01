@@ -81,13 +81,20 @@
 
    .comment,
    .source.embedded .comment {
-      color: @pink;
+      color: @light-gray;
+   }
+
+   .variable {
+      color: @purple;
    }
 
    .entity,
-   .variable,
    .keyword.operator {
       color: @dark-gray;
+   }
+
+   .function:not(.punctuation) {
+      color: @orange;
    }
 
    .keyword.control,
@@ -97,23 +104,23 @@
    }
 
    .constant,
-   .keyword.unit,
-   .string {
+   .keyword.unit {
       color: @green;
    }
 
-   .source .string {
+   .string {
+      color: @pink;
 
       .source,
       .meta.embedded.line {
-         color: @green;
+         color: @pink;
       }
 
       .punctuation.section.embedded {
-         color: @green;
+         color: @pink;
 
          .source {
-            color: @green;
+            color: @pink;
          }
       }
    }
@@ -121,6 +128,10 @@
    // Language-specific tokens
 
    .c {
+
+      &.meta {
+         color: @dark-gray;
+      }
 
       &.storage.type {
          color: @blue;
@@ -170,6 +181,10 @@
       &.source .markup.heading {
          font-weight: normal;
       }
+
+      &.entity {
+         color: @purple;
+      }
    }
 
    .html {
@@ -177,11 +192,11 @@
       &.entity.name.tag,
       &.punctuation.tag,
       &.meta.tag.doctype {
-         color: @dark-gray;
+         color: @blue;
       }
 
       &.entity.attribute-name {
-         color: @blue;
+         color: @purple;
       }
    }
 
@@ -198,7 +213,7 @@
          }
 
          &.modifier.import {
-            color: @green;
+            color: @pink;
          }
       }
    }
@@ -216,6 +231,14 @@
    }
 
    .python {
+
+      &.function.storage.type {
+         color: @blue;
+      }
+
+      &.punctuation {
+         color: @dark-gray;
+      }
 
       &.keyword {
 
