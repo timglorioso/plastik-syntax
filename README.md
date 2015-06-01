@@ -2,11 +2,24 @@
 
 Cheap colors that make your code look priceless. Free with purchase!
 
-## Screenshot
+## Screenshots
 
-![screenshot](https://raw.githubusercontent.com/timglorioso/plastik-syntax/master/plastik-screenshot.png)
+### C
 
-## Contributing
+![screenshot](https://raw.githubusercontent.com/timglorioso/plastik-syntax/master/screenshots/c.png)
 
-I don't use every language out there, so feel free to submit issues, pull
-requests, or suggestions for language support.
+### HTML
+
+![screenshot](https://raw.githubusercontent.com/timglorioso/plastik-syntax/master/screenshots/html.png)
+
+### Java
+
+![screenshot](https://raw.githubusercontent.com/timglorioso/plastik-syntax/master/screenshots/java.png)
+
+### Python
+
+![screenshot](https://raw.githubusercontent.com/timglorioso/plastik-syntax/master/screenshots/python.png)
+
+### SCSS
+
+![screenshot](https://raw.githubusercontent.com/timglorioso/plastik-syntax/master/screenshots/scss.png)
