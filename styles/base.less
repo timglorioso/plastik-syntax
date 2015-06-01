@@ -158,12 +158,17 @@
 
    .css {
 
-      &.support.type.property-name {
+      &.entity.name.tag {
          color: @blue;
       }
 
-      &.pseudo-class,
-      &.entity.name.tag {
+      &.entity.class,
+      &.entity.id,
+      &.punctuation.definition.entity {
+         color: @purple;
+      }
+
+      &.pseudo-class .punctuation.definition.entity {
          color: @dark-gray;
       }
    }
@@ -251,17 +256,6 @@
          &.other {
             color: @dark-gray;
          }
-      }
-   }
-
-   .scss {
-
-      &.entity.name.tag {
-         color: @dark-gray;
-      }
-
-      &.property-name {
-         color: @blue;
       }
    }
 }
