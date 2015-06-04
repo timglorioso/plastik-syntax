@@ -243,6 +243,10 @@
 
       &.punctuation {
          color: @dark-gray;
+
+         &.string {
+            color: @pink;
+         }
       }
 
       &.keyword {
@@ -256,6 +260,17 @@
          &.other {
             color: @dark-gray;
          }
+      }
+   }
+
+   .scss {
+
+      .variable .punctuation {
+         color: @dark-gray;
+      }
+
+      .constant.punctuation {
+         color: @green;
       }
    }
 }
